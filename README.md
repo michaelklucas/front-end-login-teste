@@ -1,27 +1,35 @@
 # FrontEndLoginTeste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+README - FrontEndLoginTeste
+  Este é o repositório do Projeto Angular. Aqui você encontrará todas as informações necessárias para entender, configurar e executar o projeto.
 
-## Development server
+Descrição do Projeto
+  O Projeto tratase de um tela de Login com validação de dados em C#, onde podemos adicionar usuarios e velos na tela de Usuario, (Dados salvo no LocalStorange).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Pré-requisitos
+  Antes de executar o projeto, certifique-se de ter os seguintes requisitos instalados em sua máquina:
 
-## Code scaffolding
+Node.js (v18.15.0 ou superior)
+Angular CLI (versão 1.7.8 ou superior)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#Instalação
+Siga as etapas abaixo para instalar e configurar o projeto em sua máquina local:
 
-## Build
+1. Clone o repositório para o seu ambiente de desenvolvimento:
+  git clone https://github.com/michaelklucas/front-end-login-teste.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Acesse o diretório do projeto:
+  cd nome-do-repositorio
 
-## Running unit tests
+3. Instale as dependências do projeto:
+  npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#Executando o Projeto
+  Após a instalação e configuração do projeto, execute-o seguindo as instruções abaixo:
 
-## Running end-to-end tests
+1. Inicie o servidor de desenvolvimento:
+  ng serve
+2. Abra o navegador e acesse http://localhost:4200 para visualizar o projeto em execução.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Licença
+Este projeto está licenciado sob a MIT License.
