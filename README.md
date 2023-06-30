@@ -19,7 +19,7 @@ Siga as etapas abaixo para instalar e configurar o projeto em sua máquina local
   git clone https://github.com/michaelklucas/front-end-login-teste.git
 
 2. Acesse o diretório do projeto:
-  cd nome-do-repositorio
+  cd front-end-login-teste
 
 3. Instale as dependências do projeto:
   npm install
