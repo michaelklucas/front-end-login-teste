@@ -1,0 +1,54 @@
+<div id="page" class="flex">
+  <div>
+    <header>
+      <img src="./assets/logo.png" alt="" />
+    </header>
+    <main>
+      <div class="headline">
+        <h1>Acesse a plataforma</h1>
+        <p>
+          Tela de login para teste tecnico da empresa Sistema Info.
+        </p>
+      </div>
+      <form [formGroup]="loginForm" (submit)="submitLogin()">
+        <div class="input-wrapper">
+          <label>E-mail</label>
+          <input type="text" formControlName="email" required placeholder="Digite seu e-mail" />
+        </div>
+
+        <div class="input-wrapper erro" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+
+        <div class="input-wrapper erro"
+        *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched">
+          Campo Obrigatório*
+        </div>
+
+        <div class="input-wrapper">
+          <div class="label-wrapper flex">
+            <label> Senha </label>
+            <a href="#"> Esqueceu a senha? </a>
+          </div>
+
+          <input type="password" formControlName="senha" placeholder="Digite sua senha"/>
+
+
+          <div class="input-wrapper erro"
+          *ngIf="loginForm.get('senha')?.errors?.['required'] && loginForm.get('senha')?.touched">
+          Campo Obrigatório*
+        </div>
+          <img onclick="togglePassword()" class="eye" src="./assets/eye-off.svg" alt="" />
+          <img onclick="togglePassword()" class="eye hide" src="./assets/eye.svg" alt="" />
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <div class="create-account">
+          Ainda não tem uma conta?
+          <a href="#"> Inscreva-se </a>
+        </div>
+      </form>
+    </main>
+  </div>
+  <img src="./assets/bg.jpg" alt="Imagem ondulada, com cores em degrade do tom de roxo para rosa e por fim brando" />
+</div>

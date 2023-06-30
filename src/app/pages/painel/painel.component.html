@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<section class="home-section">
+
+  <p class="successForm">{{ mensagemRetorno }}</p>
+  <p class="errorForm">{{ mensagemRetornoErro }}</p>
+
+  <div class="container">
+    <div class="card">
+      <p class="title">Dados do Usuario</p>
+      <form [formGroup]="formulario" (submit)="enviarFormulario()">
+
+        <div class="input-wrapper">
+          <label>Código</label>
+          <input type="text" formControlName="Codigo" required placeholder="EXP: 0000000 - Código" />
+        </div>
+
+        <div class="input-wrapper">
+          <div class="label-wrapper flex">
+            <label> Nome </label>
+          </div>
+          <input type="text" formControlName="Nome" placeholder="Nome Completo" />
+        </div>
+
+        <div class="input-wrapper erro"
+          *ngIf="formulario.get('Nome')?.errors?.['required'] && formulario.get('Nome')?.touched">
+          Campo Obrigatório*
+        </div>
+
+        <div class="input-wrapper">
+          <label>CPF</label>
+          <input type="text" formControlName="Cpf" required placeholder="000.000.000-00"
+            (input)="applyCpfMask($event)"  maxlength="14" minlength="11"/>
+        </div>
+
+        <div class="input-wrapper erro"
+          *ngIf="formulario.get('Cpf')?.errors?.['required'] && formulario.get('Cpf')?.touched">
+          Campo Obrigatório*
+        </div>
+
+        <div class="input-wrapper">
+          <label>Endereço</label>
+          <input type="text" formControlName="Endereco" required placeholder="Endereço completo" />
+        </div>
+
+        <div class="input-wrapper">
+          <div class="label-wrapper flex">
+            <label> Telefone </label>
+          </div>
+          <input type="text" formControlName="Telefone" placeholder="DDD + Numero"
+            (input)="applyTelefoneMask($event)"  maxlength="11" minlength="11"/>
+        </div>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+</section>

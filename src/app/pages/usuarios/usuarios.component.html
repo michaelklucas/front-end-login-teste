@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+
+<section class="home-section">
+  <div class="container">
+    <table id="usuarios">
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+        <th>Codigo</th>
+      </tr>
+      <tr *ngFor="let dados of dadosFormulario">
+        <td>{{ dados.nome }}</td>
+        <td>{{ dados.cpf }}</td>
+        <td>{{ dados.endereco }}</td>
+        <td>{{ dados.telefone }}</td>
+        <td>{{ dados.codigoGerado }}</td>
+      </tr>
+    </table>
+  </div>
+</section>
